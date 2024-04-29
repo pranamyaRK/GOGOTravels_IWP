@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/icon-font.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Login</title>
+
+    <style>
+        body {
+            background-image: url('/images/camp.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #back {
+            width: 12rem;
+            display: block;
+            margin: 2rem 0 0 2rem;
+        }
+
+        #container {
+            display: block;
+            padding-bottom: 6rem;
+            text-align: center;
+        }
+
+        form {
+            width: 60rem;
+            align-items: center;
+            display: inline-block;
+            margin: auto;
+            text-align: center;
+        }
+
+        #warning {
+            display: block;
+            margin: 3rem auto auto auto;
+            padding: 1rem;
+            background-color: rgb(254, 135, 135);
+            border: 1px solid rgb(254, 135, 135);
+            border-radius: 2px;
+            color: rgb(0, 0, 0);
+            width: 40rem;
+        }
+
+        input {
+            margin: auto
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <a href="/login" class="btn btn-text" id="back"> &larr; Go Back</a>
+        <form action="/auth/register" method="POST" class="form">
+            <div id="anomaly" class=" u-margin-bottom-medium">
+                <h2 class="heading-secondary">
+                    Join the adventure!
+                </h2>
+            </div>
+            <div class="form__group">
+                <input type="text" class="form__input" placeholder="Full Name" required id="name" name="name">
+            </div>
+            <div class="form__group">
+                <input type="email" class="form__input" placeholder="Email address" required id="email" name="email">
+            </div>
+            <div class="form__group">
+                <input type="password" class="form__input" placeholder="Password" required id="password"
+                    name="password">
+            </div>
+            <div class="form__group">
+                <input type="password" class="form__input" placeholder="Confirm Password" required id="password_confirm"
+                    name="password_confirm">
+            </div>
+            <div class="form__group">
+                <button class="btn btn--green">
+                    REGISTER
+                </button>
+            </div>
+        </form>
+
+        <% if (typeof message !=='undefined' && message.length !=0) { %>
+            <div id="warning">
+                <h2><%= message %></h2>
+            </div>
+        <% } %>
+    </div>
+</body>
+
+</html>

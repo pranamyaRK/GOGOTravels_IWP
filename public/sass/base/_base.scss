@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+
+}
+html{
+    font-size:62.5%; //1 rem =10px here
+
+    
+    
+    
+    
+    
+    @include respond(tab-land){//asks if width less than 1200
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
+    }
+
+    @include respond(tab-port){// asks if width less than 900
+        font-size: 50%; //1 rem = 8px, 8/16= 50%
+    }
+
+    @include respond(big-desktop){
+        font-size: 75%;// 1 rem = 12,  12/16= 75%
+    }
+}
+
+body{
+    box-sizing: border-box;
+    padding:3rem;
+
+    @include respond(tab-port){// asks if width less than 900
+        padding :0;
+    }
+}
+
+::selection{
+    background-color: $color-primary-light;
+    color: $color-white;
+}
