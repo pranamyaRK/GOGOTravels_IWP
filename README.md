@@ -1,3 +1,1 @@
-Frontend by: Abhishek Goswami
-Backend by: Pranamya Rajashekhar
-ChatBot by: Barath Kumar
+**Frontend**: Abhishek Goswami &nbsp; | &nbsp; **Backend**: Pranamya Rajashekhar &nbsp; | &nbsp; **Chatbot**: Barath Kumar
